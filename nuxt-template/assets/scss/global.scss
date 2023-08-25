@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  font-family: 'Public Sans', sans-serif;
+  background-color: $dark-gray;
+}
+
+::-webkit-scrollbar {
+  width: $xxxs;
+  border-radius: $lg;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 1px $gray;
+  border-radius: $lg;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $gray;
+  border-radius: $lg;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: $dark-gray;
+}
