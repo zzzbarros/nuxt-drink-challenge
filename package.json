@@ -20,4 +20,7 @@
     "sass": "^1.66.1",
     "sass-loader": "^13.3.2"
   },
+  "dependencies": {
+    "lucide-vue-next": "^0.268.0"
+  }
 }
