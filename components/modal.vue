@@ -4,7 +4,7 @@
       <div class="overlay" @click="handleClose" />
       <div class="content" role="document">
         <div class="close-wrapper">
-          <button @click="handleClose" class="close-button"><X /></button>
+          <button @click="handleClose" class="close-button" :title="$t('action.close')"><X /></button>
         </div>
         <slot />
       </div>

@@ -1,5 +1,5 @@
 <template>
-  <button @click="emits('handleClick',text)" :data-active="active">
+  <button @click="emits('handleClick',text)" :data-active="active" :title="text">
     {{ text }}
     <X :size="14" />
   </button>

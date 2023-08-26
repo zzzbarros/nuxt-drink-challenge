@@ -1,10 +1,10 @@
 <template>
   <div class="wrapper">
-    <input ref="searchInput" :value="search" @input="handleSearch" :placeholder="$t('drink.searchInput.placeholder')" />
-    <button v-if="!search" @click="setFocus">
+    <input ref="searchInput" :value="search" @input="handleSearch" :placeholder="$t('drink.searchInput.placeholder')" :title="$t('drink.searchInput.placeholder')"/>
+    <button v-if="!search" @click="setFocus" :title="$t('drink.searchInput.placeholder')">
       <SearchIcon :size="18" />
     </button>
-    <button v-else @click="clearSearch">
+    <button v-else @click="clearSearch" :title="$t('drink.searchInput.clear')">
       <TrashIcon :size="18" />
     </button>
   </div>
@@ -16,7 +16,6 @@ import { Search as SearchIcon, Trash as TrashIcon } from 'lucide-vue-next';
 defineProps(['search']);
 const emits = defineEmits();
 const searchInput = ref<HTMLInputElement | null>(null);
-
 function setFocus() {
   searchInput.value?.focus();
 }
