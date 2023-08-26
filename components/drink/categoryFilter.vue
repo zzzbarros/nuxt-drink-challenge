@@ -2,8 +2,7 @@
   <aside>
     <div class="wrapper">
       <h3>{{ $t('drink.categories') }}</h3>
-      <div v-if="pending">Carregando...</div>
-      <ul class="wrapper scrolled" v-else>
+      <ul class="wrapper scrolled">
         <li v-for="category in categories">
           <TagButton @handleClick="emits('toggleCategory',category.strCategory)" :text="category.strCategory" :active="props.filteredCategory === category.strCategory" />
         </li>
