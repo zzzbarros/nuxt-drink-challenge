@@ -38,11 +38,11 @@ function handleSearch(event: Event) {
     width: 100%;
     justify-content: center;
 
-    @include xlarge {
+    @include min-xlarge {
       width: 50%;
       justify-content: flex-end;
     }
-    @include xxlarge {
+    @include min-xxlarge {
       width: 50%;
       justify-content: flex-end;
     }

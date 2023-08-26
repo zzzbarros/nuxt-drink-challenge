@@ -28,10 +28,10 @@
     gap: $sm;
     border-bottom: 1px solid $dark-gray;
     padding: 0 $xxs;
-    @include xlarge {
+    @include min-xlarge {
       display: none;
     }
-    @include xxlarge {
+    @include min-xxlarge {
       display: none;
     }
 

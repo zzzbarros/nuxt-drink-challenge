@@ -28,15 +28,15 @@
     gap: $sm;
     text-align: center;
     font-size: $xxs;
-    @include large() {
+    @include min-large() {
       font-size: $xs;
     }
-    @include xlarge {
+    @include min-xlarge {
       flex-direction: row;
       padding: $md $xl;
       font-size: $xs;
     }
-    @include xxlarge {
+    @include min-xxlarge {
       flex-direction: row;
       padding: $md $xl;
       font-size: $xs;

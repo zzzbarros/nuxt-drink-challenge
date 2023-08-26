@@ -34,13 +34,13 @@
     position: fixed;
     z-index: 10;
 
-    @include xlarge {
+    @include min-xlarge {
       max-width: 20%;
       padding: 0 $xl;
       display: flex;
     }
 
-    @include xxlarge {
+    @include min-xxlarge {
       max-width: 20%;
       padding: 0 $xl;
       display: flex;

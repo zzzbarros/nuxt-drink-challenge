@@ -22,19 +22,19 @@
       border-radius: $xxxs $xxxs 0 0;
       margin-bottom: 14px;
       min-height: 144px;
-      @include small {
+      @include min-small {
         min-height: 238px;
       }
-      @include medium {
+      @include min-medium {
         min-height: 312px;
       }
-      @include large {
+      @include min-large {
         min-height: 308px;
       }
-      @include xlarge {
+      @include min-xlarge {
         min-height: 362px;
       }
-      @include xxlarge {
+      @include min-xxlarge {
         min-height: 272px;
       }
     }
