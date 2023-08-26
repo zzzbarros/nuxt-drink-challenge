@@ -14,7 +14,7 @@ export default defineNuxtConfig({
   },
   css: ['@/assets/scss/global.scss'],
   components: {
-    dirs: ['~/components'],
+    dirs: ['~/components/drink', '~/components'],
   },
   vite: {
     css: {
