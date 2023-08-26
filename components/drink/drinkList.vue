@@ -7,7 +7,7 @@
       <h2 class="hint">{{$t('drink.list.error.title')}}</h2>
       <h3 class="hint">{{$t('drink.list.error.description')}}</h3>
     </div>
-    <ul class="container" v-if="!!drinks?.length || isLoading">
+    <ul class="container" v-else-if="!!drinks?.length || isLoading">
       <li v-if="isLoading">
         <DrinkCardSkeleton />
       </li>
