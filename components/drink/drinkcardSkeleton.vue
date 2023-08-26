@@ -13,11 +13,7 @@
     display: flex;
     flex-direction: column;
     flex: 1;
-    .skeleton {
-      width: 100%;
-      background-color: $gray;
-      animation: pulse 1.5s infinite;
-    }
+
     .img {
       border-radius: $xxxs $xxxs 0 0;
       margin-bottom: 14px;

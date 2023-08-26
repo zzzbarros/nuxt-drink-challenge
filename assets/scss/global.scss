@@ -29,6 +29,13 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: $dark-gray;
 }
+
+.skeleton {
+  width: 100%;
+  background-color: $gray;
+  animation: pulse 1.5s infinite;
+}
+
 .uppercase {
   text-transform: uppercase;
 }

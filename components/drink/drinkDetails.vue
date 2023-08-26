@@ -5,18 +5,30 @@
         <img class="img" :src="drink.strDrinkThumb"/> 
         <h2>{{drink.strDrink}}</h2>
       </div>
-      <h3 class="category">{{ drink.strCategory }}</h3>
+      <h3 class="category" v-if="!drink.strCategory">
+        <div class="skeleton" />
+      </h3>
+      <h3 class="category" v-else>{{ drink.strCategory }}</h3>
     </div>
     <div class="details-container col info ">
       <div class="details-container col">
         <h3>{{ $t('drink.ingredients') }}:</h3>
-        <ul>
+        <div v-if="!ingredients.length" class="skeleton-wrapper">
+          <div class="skeleton" />
+          <div class="skeleton"/>
+        </div>
+        <ul v-else>
           <li v-for="i in ingredients">{{i}}</li>
         </ul>
       </div>
       <div class="details-container col">
         <h3>{{ $t('drink.method') }}:</h3>
-        <p>{{drink.strInstructions}}</p>
+        <div v-if="!ingredients.length" class="skeleton-wrapper">
+          <div class="skeleton" />
+          <div class="skeleton" />
+          <div class="skeleton" />
+        </div>
+        <p v-else>{{drink.strInstructions}}</p>
       </div>
     </div>
   </div>
@@ -117,6 +129,15 @@ updateIngredients()
       @include min-medium  {
         border-radius: 0 0 0 $xxxs;
       }
+    }
+
+    .skeleton {
+      height: 16px;
+    }
+    .skeleton-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: $nano;
     }
   }
   .details-container.scroll {
