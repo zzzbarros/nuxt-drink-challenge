@@ -55,10 +55,15 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
+    height: 100%;
+    min-height: -webkit-fill-available;
+    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
+    @include max-medium {
+      height: 110%;
+    }
     .overlay {
       background: $overlay;
       width: 100%;
@@ -73,10 +78,31 @@
       position: fixed;
       background: $white;
       border-radius: $xxxs;
-      width: 90%;
-      max-width: 60%;
       z-index: 20;
-      padding: $md;
+      width: 100%;
+      max-width: 100%;
+      height: fit-content;
+      display: flex;
+      flex-direction: row-reverse;
+      gap: $nano;
+      padding: $xs;
+      @include max-medium {
+        top: 0;
+        min-height: 100vh;
+        height: -webkit-fill-available;
+      }
+      @include min-large {
+        width: 90%;
+        max-width: 60%;
+        max-height: 70%;
+        overflow-y: auto;
+        @include min-xlarge { 
+           max-height: 80%;
+         }
+         @include min-xxlarge { 
+           max-height: 70%;
+         }
+      }
     }
     .close-wrapper {
       display: flex;
@@ -91,6 +117,7 @@
       justify-content: flex-end;
       border-radius: $nano;
       cursor: pointer;
+      color: $dark;
     }
     .close-button:hover {
       border: 1px solid $gray;
