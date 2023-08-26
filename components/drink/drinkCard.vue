@@ -6,7 +6,7 @@
 </template>
 
 <script setup lang="ts">
-  import type { DrinkProps } from '@/models/drinks.models'
+  import type { DrinkProps } from '@/models/drinks.model'
   withDefaults(defineProps<{ drink: DrinkProps }>(), {})
 </script>
 

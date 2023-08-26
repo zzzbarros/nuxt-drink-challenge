@@ -13,11 +13,11 @@
 </template>
 
 <script setup lang="ts">
-  import type { CategoriesProps } from '@/models/drinks.models'
+  import type { CategoryListProps } from '@/models/drinks.model'
   
   const emits = defineEmits(['toggleCategory'])
   const props = defineProps({
-    categories: Array<CategoriesProps>,
+    categories: Array<CategoryListProps>,
     filteredCategory: String
   })
 </script>

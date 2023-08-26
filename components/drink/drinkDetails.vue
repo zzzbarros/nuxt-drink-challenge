@@ -23,7 +23,7 @@
 </template>
 
 <script setup lang="ts">
-import type { DrinkProps } from '@/models/drinks.models'
+import type { DrinkProps } from '@/models/drinks.model'
 
 const props = withDefaults(defineProps<{ drink: DrinkProps }>(), {})
 const drink = ref(props.drink)
