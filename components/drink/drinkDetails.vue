@@ -28,7 +28,7 @@
           <div class="skeleton" />
           <div class="skeleton" />
         </div>
-        <p v-else>{{drink.strInstructions}}</p>
+        <p v-else class="justify-text">{{drink.strInstructions}}</p>
       </div>
     </div>
   </div>

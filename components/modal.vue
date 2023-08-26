@@ -91,18 +91,25 @@
         min-height: 100vh;
         height: -webkit-fill-available;
       }
-      @include min-large {
+      @include min-medium {
         width: 90%;
-        max-width: 60%;
-        max-height: 70%;
+        max-width: 70%;
+        max-height: 80%;
         overflow-y: auto;
-        @include min-xlarge { 
-           max-height: 80%;
-         }
-         @include min-xxlarge { 
-           max-height: 70%;
-         }
+        @include min-large {
+          width: 90%;
+          max-width: 60%;
+          max-height: 70%;
+          overflow-y: auto;
+          @include min-xlarge { 
+            max-height: 80%;
+          }
+          @include min-xxlarge { 
+            max-height: 70%;
+          }
+        }
       }
+
     }
     .close-wrapper {
       display: flex;
