@@ -10,7 +10,6 @@
 </template>
 
 <script lang="ts" setup>
-  import {} from '../buttons/tagButton.vue' 
   import type { CategoriesProps } from '@/models/drinks.models'
   
   const emits = defineEmits(['toggleCategory'])
