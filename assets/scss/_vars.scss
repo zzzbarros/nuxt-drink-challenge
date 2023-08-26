@@ -1,15 +1,12 @@
-// Colors
-$dark-blue: #030140;
-$light-blue: #F3F9FE;
-$pink: #F24B78;
-$light-pink: #FFE2EA;
 $white: #ffffff;
-$black: #000000;
+$light-blue: #F3F9FE;
+$gray: #CCD1D6;
+$pink: #F24B78;
+$dark-blue: #030140;
 $dark-gray: #22272D;
 $dark: #1a1a1a;
-$gray: #CCD1D6;
+$black: #000000;
 
-//Neon Colors
 $text-neon-pink: 0 0 2px $white, 0 0 4px $white, 0 0 22px $pink, 0 0 32px $pink, 0 0 42px $pink;
 $box-neon-pink: 0 0 .1rem $white,
   0 0 .1rem $white,
@@ -18,7 +15,6 @@ $box-neon-pink: 0 0 .1rem $white,
   0 0 1.8rem $pink,
   inset 0 0 0.8rem $pink;
 
-// Sizes
 $quark: 2px;
 $nano: 4px;
 $xxxs: 8px;
@@ -30,5 +26,39 @@ $lg: 36px;
 $xl: 40px;
 $xxl: 80px;
 
-// Shadows
 $card-shadow: rgba(255, 255, 255, 0.2) 0px 2px 8px 0px;
+$breakpoint-sm: 480px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1280px;
+$breakpoint-xxl: 1536px;
+
+@mixin small {
+  @media (min-width: $breakpoint-sm) {
+    @content;
+  }
+}
+
+@mixin medium {
+  @media (min-width: $breakpoint-md) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media (min-width: $breakpoint-lg) {
+    @content;
+  }
+}
+
+@mixin xlarge {
+  @media (min-width: $breakpoint-xl) {
+    @content;
+  }
+}
+
+@mixin xxlarge {
+  @media (min-width: $breakpoint-xxl) {
+    @content;
+  }
+}
