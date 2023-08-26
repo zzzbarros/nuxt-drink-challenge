@@ -3,21 +3,9 @@
     <Header :search="filters.search" @searching="updateSearch"/>
     <section>
       <CategoryFilter  :categories="categories" :filtered-category="filters.category" @toggle-category="toggleCategory"/>
-      <div class="container">
+      <DrinkList :drinks="list?.drinks" :filtered-category="filters.category" :has-error="meta.error"  :is-loading="meta.loading" @open-drink="showModal">
         <CategoryFilterMobile :categories="categories" :filtered-category="filters.category" @toggle-category="toggleCategory"/>
-        <h4>[ {{ list?.drinks.length ?? 0 }} ] {{ $t('drink.list.results-found') }} - {{ filters.category }}</h4>
-        <ul class="drink-list">
-          <li v-if="meta.loading">
-            <DrinkCardSkeleton />
-          </li>
-          <li v-if="meta.loading">
-            <DrinkCardSkeleton />
-          </li>
-          <li v-for="drink in list?.drinks" @click="showModal(drink)">
-            <DrinkCard :drink="drink" />
-          </li>
-        </ul>
-      </div>
+      </DrinkList>
     </section>
     <modal :visible="isVisibleModal" @close="closeModal">
       <DrinkDetails :drink="openedDrink" />
@@ -30,12 +18,12 @@
   import { type DrinkProps } from 'models/drinks.model'
 
   const route = useRoute()
+  const openedDrink = ref({} as DrinkProps)
+  const isVisibleModal = ref(false)
   const filters = reactive({
     category: (route.query.category as string) || '',
     search: (route.query.search as string) || '',
   })
-  const openedDrink = ref({} as DrinkProps)
-  const isVisibleModal = ref(false)
   const {  categories } = await DrinkServices.getCategories()
   const { list, meta, refetch } = DrinkServices.getList(filters)
 
@@ -93,49 +81,5 @@
     display: flex;
     position: relative;
     flex: 1;
-    .container {
-      display: flex;
-      position: relative;
-      flex-direction: column;
-      gap: $sm;
-      padding-left: $sm;
-      padding-right: $sm;
-      width: 100%;
-      flex: 1;
-      @include min-xlarge {
-        padding-left: 20%;
-      }
-      @include min-xxlarge {
-        padding-left: 20%;
-      }
-      
-      h4 {
-        font-weight: 500;
-        padding: 0 $xxs;
-      }
-    }
-
-    ul.drink-list {
-      width: 100%;
-      height: 100%;
-      display: grid;
-      list-style-type: none;
-      grid-template-columns: repeat(2, 1fr);
-      @include min-large {
-        grid-template-columns: repeat(3, 1fr);
-      }
-      @include min-xlarge {
-        grid-template-columns: repeat(3, 1fr);
-      }
-      @include min-xxlarge {
-        grid-template-columns: repeat(4, 1fr);
-      }
-
-      li {
-        width: 100%;
-        height: 100%;
-      }
-    }
   }
 </style>
-models/drinks.model

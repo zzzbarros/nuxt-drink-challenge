@@ -44,13 +44,19 @@ body {
   text-align: justify;
 }
 
-@keyframes pulse {
+.neonText {
+  text-shadow: $text-neon-pink;
+}
 
+.neonBox {
+  box-shadow: $box-neon-pink;
+}
+
+@keyframes pulse {
   0%,
   100% {
     opacity: 0.4;
   }
-
   50% {
     opacity: 1;
   }

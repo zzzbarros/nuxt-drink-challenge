@@ -41,9 +41,5 @@
       padding: $md $xl;
       font-size: $xs;
     }
-
-    .neonText {
-      text-shadow: $text-neon-pink;
-    }
   }
 </style>
