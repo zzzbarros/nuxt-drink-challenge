@@ -18,7 +18,7 @@
           <div class="skeleton"/>
         </div>
         <ul v-else>
-          <li v-for="i, index in ingredients">{{`${i} | ${measures[index] ?? $t('drink.undefined')}`}}</li>
+          <li v-for="ingredient, index in ingredients">{{`${ingredient} | ${measures[index] ?? $t('drink.undefined')}`}}</li>
         </ul>
       </div>
       <div class="details-container col">
