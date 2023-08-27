@@ -7,6 +7,7 @@ export const messages = {
         clear: 'Limpar pesquisa',
       },
       categories: 'Categorias',
+      favorites: 'Meus favoritos ',
       list: {
         empty: {
           title: 'Não encontramos nenhuma bebida.',
@@ -21,9 +22,15 @@ export const messages = {
       card: {
         open: 'Clique para ver os detalhes de {drink}',
       },
-      ingredients: 'Ingredientes',
-      method: 'Modo de preparo',
-      undefined: 'Indefinido',
+      details: {
+        ingredients: 'Ingredientes',
+        method: 'Modo de preparo',
+        undefined: 'Indefinido',
+        fav: {
+          add: 'Adicionar aos favoritos',
+          remove: 'Remover dos favoritos',
+        },
+      },
     },
     action: {
       close: 'Fechar',
@@ -37,6 +44,7 @@ export const messages = {
         clear: 'Clear search',
       },
       categories: 'Categories',
+      favorites: 'My favorites',
       empty: {
         title: 'No drinks found.',
         description: 'Check the filters and try again',
@@ -48,8 +56,15 @@ export const messages = {
       card: {
         open: 'Click to view details of {drink}',
       },
-      ingredients: 'Ingredients',
-      method: 'Preparation method',
+      details: {
+        ingredients: 'Ingredients',
+        method: 'Method of preparation',
+        undefined: 'Undefined',
+        fav: {
+          add: 'Add to favorites',
+          remove: 'Remove from favorites',
+        },
+      },
     },
     action: {
       close: 'Close',
