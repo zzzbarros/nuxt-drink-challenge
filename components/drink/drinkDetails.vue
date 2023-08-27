@@ -44,7 +44,7 @@
 
 <script setup lang="ts">
   import type { DrinkProps } from '@/models/drinks.model'
-import { Storage } from '@/utils/storage'
+  import { Storage } from '@/utils/storage'
   
   const props = withDefaults(defineProps<{ drink: DrinkProps}>(), {})
   defineEmits(['on:favorite'])
