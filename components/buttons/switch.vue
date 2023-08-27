@@ -66,7 +66,6 @@
     transform: translateX($translate);
   }
 
-  /* Rounded sliders */
   .slider.round {
     border-radius: $lg;
   }
