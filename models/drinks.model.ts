@@ -26,4 +26,5 @@ export interface DrinkListProps {
 export interface FilterProps {
   search: string
   category: string
+  onlyFavorites: boolean
 }
