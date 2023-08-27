@@ -14,7 +14,7 @@
 
 <style scoped lang="scss">
   $width: 56px;
-  $translate: $width / 2;
+  $translate: calc($width / 2);
   .switch {
     position: relative;
     display: inline-block;

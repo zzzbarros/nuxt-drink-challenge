@@ -9,9 +9,6 @@ export default defineNuxtConfig({
       ],
     },
   },
-  devServer: {
-    host: '192.168.0.6',
-  },
   css: ['@/assets/scss/global.scss'],
   components: {
     dirs: ['~/components/buttons', '~/components/drink', '~/components'],
