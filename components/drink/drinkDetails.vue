@@ -18,7 +18,7 @@
           <div class="skeleton"/>
         </div>
         <ul v-else>
-          <li v-for="i in ingredients">{{i}}</li>
+          <li v-for="i, index in ingredients">{{`${i} | ${measures[index] ?? $t('drink.undefined')}`}}</li>
         </ul>
       </div>
       <div class="details-container col">
@@ -40,22 +40,26 @@ import type { DrinkProps } from '@/models/drinks.model'
 const props = withDefaults(defineProps<{ drink: DrinkProps }>(), {})
 const drink = ref(props.drink)
 const ingredients = ref<string[]>([])
+const measures = ref<string[]>([])
 
 watch(() => props.drink, (newDrink) => {
   drink.value = newDrink
-  updateIngredients()
+  updateData()
 })
 
-function updateIngredients() {
+function updateData() {
   const keys = Object.keys(drink.value) as Array<keyof DrinkProps>
   keys.forEach(key => {
     if ((key as string).includes('strIngredient') && drink.value[key]) {
-      ingredients.value.push(drink.value[key]!)
+      ingredients.value.push(drink.value[key])
+    }
+    if ((key as string).includes('strMeasure') && drink.value[key]) {
+      measures.value.push(drink.value[key])
     }
   })
 }
 
-updateIngredients()
+updateData()
 </script>
 
 <style lang="scss" scope>
@@ -81,7 +85,7 @@ updateIngredients()
       padding-top: $xxs;
       padding-bottom: $xxs;
       gap: $xl;
-      @include min-large {
+      @include min-medium {
         height: 100%;
         overflow-y: auto;
         margin-right: $lg;
@@ -98,9 +102,13 @@ updateIngredients()
       padding: $nano $xxs;
     }
 
-    ul, ol {
+    ul {
       padding: $nano $md;
     } 
+
+    ol {
+      list-style-type: none;
+    }
 
     .image-wrapper {
       position: relative;

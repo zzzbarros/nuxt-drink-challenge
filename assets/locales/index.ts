@@ -23,6 +23,7 @@ export const messages = {
       },
       ingredients: 'Ingredientes',
       method: 'Modo de preparo',
+      undefined: 'Indefinido',
     },
     action: {
       close: 'Fechar',

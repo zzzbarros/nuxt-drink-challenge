@@ -11,6 +11,10 @@ export interface DrinkProps {
   strIngredient2: string
   strIngredient3: string
   strIngredient4: string
+  strMeasure1: string
+  strMeasure2: string
+  strMeasure3: string
+  strMeasure4: string
 }
 
 export type CategoryListProps = Pick<DrinkProps, 'strCategory'>
