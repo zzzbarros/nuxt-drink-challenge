@@ -106,10 +106,6 @@ updateData()
       padding: $nano $md;
     } 
 
-    ol {
-      list-style-type: none;
-    }
-
     .image-wrapper {
       position: relative;
       .img {
