@@ -1,10 +1,13 @@
 <template>
   <aside>
     <div class="wrapper">
+      <h3>{{ $t('drink.favorites') }}</h3>
+      <Switch :isChecked="onlyFavorites" @update:checked="$emit('toggle:favorite')"/>
+      <br/>
       <h3>{{ $t('drink.categories') }}</h3>
       <ul class="wrapper scrolled">
         <li v-for="category in categories">
-          <TagButton @handleClick="emits('toggleCategory',category.strCategory)" :text="category.strCategory" :active="props.filteredCategory === category.strCategory" />
+          <TagButton @handleClick="$emit('toggle:category',category.strCategory)" :text="category.strCategory" :active="filteredCategory === category.strCategory" />
         </li>
       </ul>
     </div>
@@ -14,10 +17,11 @@
 <script setup lang="ts">
   import type { CategoryListProps } from '@/models/drinks.model'
   
-  const emits = defineEmits(['toggleCategory'])
-  const props = defineProps({
+  defineEmits(['toggle:category', 'toggle:favorite'])
+  defineProps({
     categories: Array<CategoryListProps>,
-    filteredCategory: String
+    filteredCategory: String,
+    onlyFavorites: Boolean
   })
 </script>
 
@@ -32,23 +36,19 @@
     padding: 0 $xxxs;
     position: fixed;
     z-index: 10;
-
     @include min-xlarge {
       max-width: 20%;
       padding: 0 $xl;
       display: flex;
     }
-
     @include min-xxlarge {
       max-width: 20%;
       padding: 0 $xl;
       display: flex;
     }
-
     ul {
       list-style-type: none;
     }
-
     .wrapper {
       position: relative;
       display: flex;
@@ -59,7 +59,6 @@
         margin-bottom: $xxxs;
       }
     }
-
     .scrolled {
       max-height: 100%;
       overflow-y: auto;

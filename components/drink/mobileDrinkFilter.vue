@@ -1,9 +1,13 @@
 <template>
   <div class="filter-mobile-container">
+    <div class="fav-container">
+      <h3>{{ $t('drink.favorites') }}</h3>
+        <Switch :isChecked="onlyFavorites" @update:checked="$emit('toggle:favorite')"/>
+    </div>
     <h4>Filter por categorias</h4>
     <ul>
       <li v-for="category in categories">
-        <TagButton @handleClick="emits('toggleCategory',category.strCategory)" :text="category.strCategory" :active="props.filteredCategory === category.strCategory" />
+        <TagButton @handleClick="$emit('toggle:category',category.strCategory)" :text="category.strCategory" :active="filteredCategory === category.strCategory" />
       </li>
     </ul>
   </div>
@@ -12,10 +16,11 @@
 <script lang="ts" setup>
   import type { CategoryListProps } from '@/models/drinks.model'
   
-  const emits = defineEmits(['toggleCategory'])
-  const props = defineProps({
+  defineEmits(['toggle:category','toggle:favorite'])
+  defineProps({
     categories: Array<CategoryListProps>,
-    filteredCategory: String
+    filteredCategory: String,
+    onlyFavorites: Boolean
   })
 </script>
 
@@ -74,6 +79,11 @@
       background: $pink;
       color: $white;
       border-color: transparent;
+    }
+
+    .fav-container {
+      display: flex;
+      justify-content:space-between;
     }
   }
 </style>
