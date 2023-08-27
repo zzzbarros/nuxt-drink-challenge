@@ -36,7 +36,9 @@
 - [x] Dado que sou um usuário esperando a lista de bebidas carregar, quero ver um esqueleto do card durante o carreamento. (bônus)
 
 ### Opcionais
-- [] Escrever testes
+- [ ] Escrever testes
+    - [x] Testar composables
+    - [ ] Testar componentes de UI
 - [x] Aplicação deve ser responsiva;
 
 ### Observação
