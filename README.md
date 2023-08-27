@@ -1,45 +1,41 @@
 # Desafio Front-end - Faster
 
 ## Requisitos técnicos
-
-### Obrigatórios
-
 - [x] Criar documentação para a execução e apresentação do projeto no README
 - [x] Utilizar typescript;
 - [x] Criar nome para aplicação;
 - [x] Tratamento básicos de erros da API
 - [x] Fácil de buildar e executar a aplicação para testes (Instruções ao final do readme).
 
-### Features
-
+### Features Obrigatórias
 - [x] Dado que sou um usuário eu quero visualizar as categorias de bebidas:
     - [x] Ao escolher uma categoria eu devo visualizar a lista das bebidas dessa categoria.
-
 - [x] Dado que sou um usuário eu quero ver os detalhes da bebida: 
   - [x] Apresentar a imagem da bebida escolhida.
   - [x] Apresentar a instrução da bebida escolhida.
-  - [x] Apresentar os ingredientes da bebida escolhida. (bônus) 
-  - [x] Apresentar a categoria da bebida escolhida. (bônus)
-  - [x] Apresentar num modal. (bônus)
-    - [x] Fechar modal ao apertar o 'ESC' no teclado. (bônus)
-    - [x] Fechar modal clicando no overlay (fora do modal). (bônus)
-
 - [x] Dado que sou um usuário eu quero pesquisar uma bebida específica através de um campo de busca.
-  - [x] Limpar campo de pesquisa via botão de lixeira (bônus)
-  - [x] Focar pesquisa ao clicar em lupa. (bônus)
-  - [x] Filtrar resultados 5 segundos após usuário parar de digitar. (bônus)
-    - [x] Criado utilitário de debounce para ser reutilizado na aplicação.  
-
 - [x] Dado que sou um usuário eu quero pesquisar uma bebida específica e filtrar por categoria.
   - Obs: devido a indisponibilida de combinar queries via api, foi feito a categoria e apartir dos resultados é feito um filtro no front-end pela palavra chave.
      
-- [x] Dado que sou um usuário esperando a lista de bebidas carregar, quero ver um esqueleto do card durante o carreamento. (bônus)
+
+### Features Incrementais (Bônus)
+  - [x] Apresentar os ingredientes da bebida escolhida.
+      - [x] Apresentar medida dos ingredientes    
+  - [x] Apresentar a categoria da bebida escolhida. 
+  - [x] Apresentar modal.
+    - [x] Fechar modal ao apertar o 'ESC' no teclado. 
+    - [x] Fechar modal clicando no overlay (fora do modal).
+  - [x] Filtrar resultados 5 segundos após usuário parar de digitar. 
+    - [x] Criado utilitário de debounce para ser reutilizado na aplicação.
+  - [x] Limpar campo de pesquisa via botão de lixeira 
+  - [x] Dado que sou um usuário esperando a lista de bebidas carregar, quero ver um esqueleto do card durante o carreamento.
+
 
 ### Opcionais
-- [ ] Escrever testes
-    - [x] Testar composables
-    - [ ] Testar componentes de UI
 - [x] Aplicação deve ser responsiva;
+- [ ] Escrever testes
+    - [x] Testar debounce composable
+    - [ ] Testar componentes de UI
 
 ### Observação
 #### UX/ UI
