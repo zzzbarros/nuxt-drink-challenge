@@ -1,7 +1,7 @@
 <template>
   <div class="drink-list">
     <slot />
-    <h4>[ {{ drinks?.length ?? 0 }} ] {{ $t('drink.list.results-found') }} - {{ filteredCategory }}</h4>
+    <h4>[ {{ drinks?.length ?? 0 }} ] {{ $t('drink.list.results-found', drinks?.length ?? 1) }} - {{ filteredCategory }}</h4>
     <div class="boundary neonBox" v-if="hasError">
       <ServerCrash :size="80" />
       <h2 class="hint">{{$t('drink.list.error.title')}}</h2>

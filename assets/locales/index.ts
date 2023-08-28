@@ -17,7 +17,7 @@ export const messages = {
           title: 'Ops, parece que ocorreu um erro.',
           description: 'Não foi possível encontrar as bebidas. Tente novamente em alguns instantes...',
         },
-        'results-found': 'resultados encontrados',
+        'results-found': 'resultado encontrado | resultados encontrados',
       },
       card: {
         open: 'Clique para ver os detalhes de {drink}',
@@ -46,13 +46,16 @@ export const messages = {
       },
       categories: 'Categories',
       favorites: 'My favorites',
-      empty: {
-        title: 'No drinks found.',
-        description: 'Check the filters and try again',
-      },
-      error: {
-        title: 'Oops, an error occurred.',
-        description: "We couldn't find the drinks. Please try again in a moment...",
+      list: {
+        empty: {
+          title: 'No drinks found.',
+          description: 'Check the filters and try again',
+        },
+        error: {
+          title: 'Oops, an error occurred.',
+          description: "We couldn't find the drinks. Please try again in a moment...",
+        },
+        'results-found': 'result found | results found',
       },
       card: {
         open: 'Click to view details of {drink}',
