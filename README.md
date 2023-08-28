@@ -29,7 +29,8 @@
     - [x] Criado utilitário de debounce para ser reutilizado na aplicação.
 - [x] Limpar campo de pesquisa via botão de lixeira 
 - [x] Apresentar um esqueleto do card durante o carreamento.
-- [x] Apresentar mensagem 'imagem não encontrada' caso ocorra erro ao carregar as informações da mesma. 
+- [x] Apresentar mensagem 'imagem não encontrada' caso ocorra erro ao carregar as informações da mesma.
+- [x] Adicionar internacionalização com traduções para pt-BR e en-US.
 
 
 ### Opcionais
