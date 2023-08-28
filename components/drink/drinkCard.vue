@@ -1,6 +1,6 @@
 <template>
   <div class="drink-card" :title="$t('drink.card.open', {drink: drink.strDrink})">
-    <img :src="drink.strDrinkThumb" />
+    <DrinkCardImageFallback :src="drink.strDrinkThumb" />
     <p>{{ drink.strDrink }}</p>
   </div>
 </template>

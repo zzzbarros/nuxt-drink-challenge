@@ -21,6 +21,7 @@ export const messages = {
       },
       card: {
         open: 'Clique para ver os detalhes de {drink}',
+        'image-fallback': 'Imagem não encontrada',
       },
       details: {
         ingredients: 'Ingredientes',
@@ -55,6 +56,7 @@ export const messages = {
       },
       card: {
         open: 'Click to view details of {drink}',
+        'image-fallback': 'Not found image',
       },
       details: {
         ingredients: 'Ingredients',
