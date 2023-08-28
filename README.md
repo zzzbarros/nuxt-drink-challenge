@@ -29,6 +29,7 @@
     - [x] Criado utilitário de debounce para ser reutilizado na aplicação.
   - [x] Limpar campo de pesquisa via botão de lixeira 
   - [x] Dado que sou um usuário esperando a lista de bebidas carregar, quero ver um esqueleto do card durante o carreamento.
+  - [x] Dado que sou um usuário acessando a lista de bebidas e ocorre um erro ao carregar um imagem, vejo a mensagem 'imagem não encontrada'.
 
 
 ### Opcionais
