@@ -1,11 +1,10 @@
-import { Storage } from '@/utils/storage'
 import type { DrinkProps, DrinkListProps, FilterProps } from 'models/drinks.model'
-
-const BASE_URL = 'https://www.thecocktaildb.com/api/json/v1/1'
 
 interface CategoryResponseProps {
   drinks: Pick<DrinkProps, 'strCategory'>[]
 }
+
+const BASE_URL = 'https://www.thecocktaildb.com/api/json/v1/1'
 
 export const DrinkServices = {
   async getCategories() {
