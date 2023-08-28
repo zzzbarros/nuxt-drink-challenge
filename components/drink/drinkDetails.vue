@@ -115,7 +115,7 @@
 
     .fav-desktop {
       display: flex;
-      @include max-small {
+      @include max-medium {
         display: none;
       }
     }
