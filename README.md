@@ -19,17 +19,17 @@
      
 
 ### Features Incrementais (Bônus)
-  - [x] Apresentar os ingredientes da bebida escolhida.
-      - [x] Apresentar medida dos ingredientes    
-  - [x] Apresentar a categoria da bebida escolhida. 
-  - [x] Apresentar modal.
+- [x] Apresentar os ingredientes da bebida escolhida.
+  - [x] Apresentar medida dos ingredientes.     
+- [x] Apresentar modal.
     - [x] Fechar modal ao apertar o 'ESC' no teclado. 
     - [x] Fechar modal clicando no overlay (fora do modal).
-  - [x] Filtrar resultados 5 segundos após usuário parar de digitar. 
+- [x] Persistir filtros na URL, mantendo informações ao atualizar a página.
+- [x] Filtrar resultados 5 segundos após usuário parar de digitar. 
     - [x] Criado utilitário de debounce para ser reutilizado na aplicação.
-  - [x] Limpar campo de pesquisa via botão de lixeira 
-  - [x] Dado que sou um usuário esperando a lista de bebidas carregar, quero ver um esqueleto do card durante o carreamento.
-  - [x] Dado que sou um usuário acessando a lista de bebidas e ocorre um erro ao carregar um imagem, vejo a mensagem 'imagem não encontrada'.
+- [x] Limpar campo de pesquisa via botão de lixeira 
+- [x] Apresentar um esqueleto do card durante o carreamento.
+- [x] Apresentar mensagem 'imagem não encontrada' caso ocorra erro ao carregar as informações da mesma. 
 
 
 ### Opcionais
