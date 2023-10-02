@@ -1,4 +1,4 @@
-# Desafio Front-end - Faster
+# Desafio Front-end 
 
 ## Requisitos técnicos
 - [x] Criar documentação para a execução e apresentação do projeto no README
